@@ -43,6 +43,8 @@
     "popper.js": "^1.14.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
     "socket.io": "^1.7.4",
     "tmj-passport": "^1.0.0"
   },
