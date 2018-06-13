@@ -18,6 +18,7 @@
     "framework"
   ],
   "dependencies": {
+    "axios": "^0.18.0",
     "bcrypt": "^1.0.3",
     "bes-logger": "^1.0.3",
     "bes-middleware": "^1.0.4",
@@ -73,7 +74,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-spec-reporter": "0.0.31",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.10",
     "node-sass": "^4.8.3",
     "nodemon": "^1.17.2",
     "sass-loader": "^6.0.7",
