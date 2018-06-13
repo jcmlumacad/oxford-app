@@ -15,9 +15,11 @@ const outputPath = 'public/dist';
 
 module.exports = {
     entry: {
-        vendor: ['bootstrap'],
+        vendor: [
+            jsPath + '/vendor.js'
+        ],
         app: [
-            jsPath + '/app.js',
+            jsPath + '/app.jsx',
             sassPath + '/app.scss'
         ]
     },
@@ -26,13 +28,13 @@ module.exports = {
         filename: '[name].js'
     },
     resolve: {
-        extensions: [".js", ".json"]
+        extensions: ['*', '.js', '.jsx', '.json']
     },
     devtool: isDevelopment ? 'inline-source-map' : false,
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
                 loader: 'babel-loader'
             },
@@ -74,7 +76,7 @@ module.exports = {
             test: /\.js$/,
             options: {
                 babel: {
-                    presets: ['es2015'],
+                    presets: ['react'],
                     plugins: ['transform-runtime']
                 }
             }
@@ -87,8 +89,7 @@ module.exports = {
             Popper: ['popper.js', 'default'],
             // In case you imported plugins individually, you must also require them here:
             Util: 'exports-loader?Util!bootstrap/js/dist/util',
-            Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
+            Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
         })
-
     ]
 };
