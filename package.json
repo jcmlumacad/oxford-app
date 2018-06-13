@@ -1,6 +1,6 @@
 {
-  "name": "bes",
-  "description": "A NodeJS framework from scratch",
+  "name": "oxford-app",
+  "description": "Using bes.js framework with Oxford API",
   "repository": "https://github.com/TMJPEngineering/bes.git",
   "license": "MIT",
   "scripts": {
