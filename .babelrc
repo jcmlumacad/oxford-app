@@ -1,7 +1,8 @@
 {
   "presets": [
     "es2015",
-    "stage-2"
+    "stage-2",
+    "react"
   ],
   "plugins": [
     "transform-class-properties",
@@ -9,6 +10,9 @@
     ["babel-plugin-root-import", [{
       "rootPathPrefix": "~",
       "rootPathSuffix": "./"
+    }, {
+      "rootPathPrefix": "#",
+      "rootPathSuffix": "./resources/assets/js/"
     }]]
   ]
 }
