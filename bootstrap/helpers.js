@@ -5,6 +5,7 @@ import { trans } from 'bes-translation';
 import app from '~/config/app';
 import database from '~/config/database';
 import logger from '~/config/logger';
+import oxford from '~/config/oxford';
 
 let connection = database.connections[database.default];
 
@@ -17,7 +18,8 @@ Object.assign(global, helpers);
 global.config = {
     app,
     database,
-    logger
+    logger,
+    oxford
 };
 
 /**
