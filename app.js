@@ -6,6 +6,7 @@ import './bootstrap/helpers';
 import routes from './app/Http/routes';
 
 import processHandler from './bootstrap/process-handler';
+import proxy from './bootstrap/proxy';
 import compress from './bootstrap/compress';
 import coreMiddleware from './bootstrap/core-middleware';
 import database from './bootstrap/database';
@@ -26,6 +27,8 @@ export default () => {
     // HTML Files
     app.use('/views', expressStatic(`${__dirname}/resources/views`));
 
+    // Proxy server for oxford
+    proxy(app);
     // This library uses for security purposes like session, crsf, passport, and helmet.
     coreMiddleware(app);
     // Database configuration
